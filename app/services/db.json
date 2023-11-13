@@ -1,0 +1,1 @@
+{"_default": {"1": {"name": "Form1", "user_name": "text", "lead_email": "email", "phone_number": "phone"}, "2": {"name": "Form2", "Email": "email", "Phone": "phone", "Date": "date", "Description": "text"}, "3": {"name": "Form3", "First_name": "text", "Last_name": "text", "Phone": "phone", "Address": "text"}, "4": {"name": "Form4", "Date": "date", "Description": "text"}}}
