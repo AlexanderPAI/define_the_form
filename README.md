@@ -6,8 +6,12 @@ https://docs.google.com/document/d/1fMFwPBs53xzcrltEFOpEG4GWTaQ-5jvVLrNT6_hmC7I/
 
 Соискатель: Петров Александр
 
-## Стек технологий:
-- 
+## Стек основных технологий:
+- fastapi==0.104.1
+- uvicorn==0.24.0.post1
+- tinydb==4.8.0
+
+Подробный стек в `requirements.txt`
 
 ## Как запустить?
 
