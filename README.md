@@ -14,7 +14,7 @@ https://docs.google.com/document/d/1fMFwPBs53xzcrltEFOpEG4GWTaQ-5jvVLrNT6_hmC7I/
 Подробный стек в `requirements.txt`
 
 ## Как запустить?
-
+___
 ### Вариант 1: в Docker-контейнере
 
 #### 1. Клонировать репозиторий на локальную машину:
@@ -29,7 +29,7 @@ git clone git@github.com:AlexanderPAI/define_the_form.git
 docker-compose up --build
 ```
 URL Веб-приложения - http://0.0.0.0:8000
-
+___
 ### Вариант 2: без Docker-контейнера через виртуальное окружение
 
 #### 1. Клонировать репозиторий на локальную машину:
@@ -64,8 +64,8 @@ source venv\bin\activate
 ```
 
 URL Веб-приложения - http://0.0.0.0:8000
-
-## 3. Как работь?
+___
+## Как работь?
 
 В приложении имеется тестовая БД (tinyBD), наполненная тестовыми данными.
 Расположение БД `app/services/db.json`
