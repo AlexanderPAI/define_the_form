@@ -64,7 +64,8 @@ class Form:
             flag = False
             for key, value in item.items():
                 if key != 'name':
-                    if key in form_template.keys() and form_template[key] == value:
+                    if (key in form_template.keys()
+                            and form_template[key] == value):
                         flag = True
                     else:
                         flag = False
