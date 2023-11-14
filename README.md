@@ -14,7 +14,7 @@ https://docs.google.com/document/d/1fMFwPBs53xzcrltEFOpEG4GWTaQ-5jvVLrNT6_hmC7I/
 Подробный стек в `requirements.txt`
 
 ## Как запустить?
-___
+
 ### Вариант 1: в Docker-контейнере
 
 #### 1. Клонировать репозиторий на локальную машину:
@@ -64,7 +64,7 @@ source venv\bin\activate
 ```
 
 URL Веб-приложения - http://0.0.0.0:8000
-___
+
 ## Как работь?
 
 В приложении имеется тестовая БД (tinyBD), наполненная тестовыми данными.
