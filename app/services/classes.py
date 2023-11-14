@@ -81,7 +81,3 @@ class Form:
 
     def __str__(self):
         return 'Форма'
-
-
-form = Form({'name': 'Alex', 'email': 'ya@ya.ru'})
-dct = form.get_form_template()
