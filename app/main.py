@@ -2,6 +2,7 @@ import re
 
 from fastapi import FastAPI, Request
 
+from app.services.db import db
 
 class Form:
     """Класс формы."""
@@ -50,13 +51,37 @@ class Form:
             form_template[key] = self.__field_type(value)
         return form_template
 
+    def find_template_in_db(self, db) -> list:
+        """
+        Найти в базе данных шаблон, соответствующий шаблону формы.
+        Метод упрощен, так как используется tinyDB.
+        При использовании "взрослой" БД, безусловно потребуется
+        оптимизация запросов.
+        """
+        form_template = self.get_form_template()
+        template_names = []
+        for item in db:
+            flag = False
+            for key, value in item.items():
+                if key != 'name':
+                    if key in form_template.keys() and form_template[key] == value:
+                        flag = True
+                    else:
+                        flag = False
+                        break
+            if flag:
+                template_names.append(item['name'])
+        return template_names
+
 
 app = FastAPI()
 
 
 @app.post('/get_form')
-def get_form(request: Request) -> dict[str, str]:
+def get_form(request: Request):
     """Эндпоинт для определения шаблона формы."""
     form = Form(request.query_params)
-    form_template = form.get_form_template()
-    return form_template
+    template_names = form.find_template_in_db(db)
+    if template_names:
+        return template_names
+    return form.get_form_template()
