@@ -1,6 +1,9 @@
 from requests import post
 from json import loads
 
+from config import info
+
+
 URL = 'http://127.0.0.1:8000/get_form?'
 
 requests = [
@@ -10,7 +13,6 @@ requests = [
 ]
 
 for request in requests:
-    print(f'{"Запрос":-^150}')
-    print(f'Тестовый запрос: {request}')
+    info(f'Тестовый запрос: {request}')
     response = post(request)
-    print(f'Ответ: {loads(response.text)}')
+    info(f'Ответ: {loads(response.text)}')

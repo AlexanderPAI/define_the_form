@@ -32,9 +32,5 @@ test_db = [
 
 db = TinyDB('app/services/db.json')
 
-
+# Наполнение БД тестовыми данными
 # db.insert_multiple(test_db)
-
-
-# for item in db:
-#     print(item)

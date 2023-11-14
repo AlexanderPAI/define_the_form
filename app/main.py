@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-from app.services.endpoints import router
+from app.api.get_form import router
 
 
 app = FastAPI()
