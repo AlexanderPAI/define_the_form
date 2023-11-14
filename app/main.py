@@ -4,12 +4,14 @@ from fastapi import FastAPI, Request
 
 from app.services.db import db
 
+
 class Form:
     """Класс формы."""
 
     def __init__(self, *args):
         self.__dict__.update(*args)
 
+    @staticmethod
     def __is_date(self, date: str) -> bool:
         """Валидатор поля 'Дата'."""
         regex_pattern = r'^\d{2}\.\d{2}\.\d{4}'
@@ -17,6 +19,7 @@ class Form:
             return True
         return False
 
+    @staticmethod
     def __is_phone(self, phone: str) -> bool:
         """Валидатор поля 'Номер телефона'."""
         regex_pattern = r'^\+7\s\d{3}\s\d{3}\s\d{2}\s\d{2}$'
@@ -24,6 +27,7 @@ class Form:
             return True
         return False
 
+    @staticmethod
     def __is_email(self, email: str) -> bool:
         """Валидатор поля 'Email'."""
         regex_pattern = r'(\w+[.-_])*\w+@\w+(\.[A-Z|a-z]{2,})+'
