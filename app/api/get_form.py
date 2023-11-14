@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Request
 
-from app.services.db import db
-from app.services.classes import Form
+from ..services.db import db
+from ..services.classes import Form
 
 
 router = APIRouter()
