@@ -45,6 +45,14 @@ db = TinyDB('путь_БД')
 Скрипт с тестовыми расположен `app/tests/test_requests.py`.
 Результаты тестовых запросов из скрипта сохраняются в логгировании в каталоге `app/tests/logs/`.
 
+Запуск скрипта после запуска приложения:
+```bash
+#PowerShell(Windows)
+python .\app\tests\test_requests.py
+# Linux
+python3 app/tests/test_requests.py
+```
+
 ### Примеры запросов
 Для тестирования приложения рекомендуется использовать Postman или любое иное аналогичное приложение для работы с API. 
 
