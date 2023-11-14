@@ -15,6 +15,8 @@ https://docs.google.com/document/d/1fMFwPBs53xzcrltEFOpEG4GWTaQ-5jvVLrNT6_hmC7I/
 
 ## Как запустить?
 
+### Вариант 1: в Docker-контейнере
+
 #### 1. Клонировать репозиторий на локальную машину:
 ```bash
 git clone git@github.com:AlexanderPAI/define_the_form.git
@@ -26,9 +28,44 @@ git clone git@github.com:AlexanderPAI/define_the_form.git
 # В корневом каталоге приложения
 docker-compose up --build
 ```
-Приложение запускается по адресу http://0.0.0.0:8000
+URL Веб-приложения - http://0.0.0.0:8000
 
-## Как работь?
+### Вариант 2: без Docker-контейнера через виртуальное окружение
+
+#### 1. Клонировать репозиторий на локальную машину:
+```bash
+git clone git@github.com:AlexanderPAI/define_the_form.git
+```
+
+#### 2. Перейти в корневой каталог приложения `define_the_form`, поднять виртуальное окружение, установить зависимости
+```bash
+# Перейти в корневой каталог приложения
+cd define_the_form
+
+# Поднять виртуальное окружение
+python -m venv venv
+
+# Активировать виртуальное окружение
+# PowerShell(Windows)
+.\venv\Script\activate
+# Linux(Ubuntu)
+source venv\bin\activate
+
+# Обновить менеджер пакетов pip
+(venv) python -m pip install --upgrade pip
+
+# Установить зависимости
+(venv) pip install -r requirements.txt
+```
+
+#### 3. Запустить приложение через `uvicorn`
+```bash 
+(venv) uvicorn app.main:app --host 0.0.0.0 --port 8000
+```
+
+URL Веб-приложения - http://0.0.0.0:8000
+
+## 3. Как работь?
 
 В приложении имеется тестовая БД (tinyBD), наполненная тестовыми данными.
 Расположение БД `app/services/db.json`
