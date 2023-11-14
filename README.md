@@ -66,7 +66,7 @@ http://0.0.0.0:8000/get_form?field1=value1&field2=value2
 Например:
 
 ```
-http://0.0.0.0:8000/get_form?Email=ya@ya.ru&Phone+Number=%2B7+999+865+92+00
+http://0.0.0.0:8000/get_form?Email=ya@ya.ru&Phone+Number=%2B7+901+132+22+12
 ```
 
 Приложение осуществляет валидацию типа полей по их значению.
